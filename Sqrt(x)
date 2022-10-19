@@ -1,0 +1,20 @@
+class Solution 
+{
+    public static int mySqrt(int x)
+        {
+            int j=0;
+            for(int i=1;i<=x;i++)
+                {
+                    if(i%2==1)
+                    {
+                        j++;
+                        x=x-i;
+                    }
+                    else if(i%2!=0)
+                    {
+                        
+                    }
+                }
+            return j;
+        }
+}
