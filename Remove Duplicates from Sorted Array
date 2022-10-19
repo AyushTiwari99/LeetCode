@@ -1,0 +1,45 @@
+class Solution 
+{
+        public static int removeDuplicates(int[] arr)
+    {
+        int n=arr.length;
+        int k=0;
+        for(int i=0;i<n-1;i++)
+        {
+            if(arr[i]!=arr[i+1])
+            {
+                arr[k]=arr[i];
+                k++;
+            }
+        }
+        arr[k]=arr[n-1];
+        return k+1;
+    }
+}
+
+
+
+------------------------
+
+
+// class Solution 
+// {
+//         public static int removeDuplicates(int[] arr)
+//     {
+//         LinkedList<Integer> Node=new LinkedList<>();
+//         for(int i=0;i<arr.length-1;i++)
+//         {
+//             if(arr[i]!=arr[i+1])
+//             {
+//                 Node.add(arr[i]);
+//             }
+//         }
+//         Node.add(arr[arr.length-1]);
+//         int k=Node.size();
+//         for (int i=0;i<k;i++)
+//         {
+//             arr[i]=Node.get(i);
+//         }
+//         return k;
+//     }
+// }
