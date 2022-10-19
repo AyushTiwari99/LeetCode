@@ -1,0 +1,27 @@
+class Solution {
+    public int lengthOfLastWord(String s) {
+        String arr[]=s.split(" ");
+        
+        String a=arr[arr.length-1];
+        a=a.trim();
+        int x=a.length();
+        return x;
+    }
+}
+
+
+// class Solution {
+//     public int lengthOfLastWord(String s) {
+//         s = s.toLowerCase();
+//         int c = 0;
+//         // if(s.length() == 0 || s.length() == 1) return s.length();
+//         for(int i=s.length()-1; i>=0; i--){
+//             if(s.charAt(i) >= 'a' && s.charAt(i) <= 'z'){
+//                 c++;
+//                 if(i != 0){
+//                 if(s.charAt(i-1) == ' ') return c;}
+//             }
+//         }
+//         return c;
+//     }
+// }
