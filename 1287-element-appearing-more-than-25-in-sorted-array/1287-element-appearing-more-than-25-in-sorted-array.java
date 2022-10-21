@@ -19,10 +19,10 @@ class Solution {
             else
             {
                 fr=Math.max(c,fr);
-                if(fr>(double)bound)
-                {
-                    return arr[i-1];
-                }
+                // if(fr>(double)bound)
+                // {
+                //     return arr[i-1];
+                // }
                 c=1;
             }
         }
