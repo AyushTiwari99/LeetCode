@@ -1,24 +1,23 @@
 class Solution {
-    public int findCenter(int[][] ed)
+    public int findCenter(int[][] edges)
     {
-        int edgezero=0;
-        int edgeone=0;
-        for(int i=0;i<=1;i++)
+        int n=edges.length+1;
+        int[] edgecount=new int[n+1];
+        for(int[] edge :edges)
         {
-            for(int j=0;j<1;j++)
+            int x=edge[0];
+            int y=edge[1];
+            edgecount[x]++;
+            edgecount[y]++;
+            if(edgecount[x]>1)
             {
-               if(ed[i][j]==ed[i+1][j] || ed[i][j]==ed[i+1][j+1])
-               {
-                   edgezero=ed[i][j];
-                   return edgezero;
-               }
-                else
-                {
-                    return ed[i][j+1];
-                }
+                return x;
+            }
+            if(edgecount[y]>1)
+            {
+                return y;
             }
         }
-       
         return 0;
     }
 }
