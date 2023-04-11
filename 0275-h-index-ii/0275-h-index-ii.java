@@ -1,16 +1,23 @@
 class Solution {
     public int hIndex(int[] cit) 
     {
-    //     if(cit.length%2==0) return cit[Math.floor(cit.length/2)]; 
-    //     return cit[cit.length/2];
-        int n= cit.length;
-        for(int i=0;i<n;i++)
+        int n=cit.length;
+        int x=0;
+        int y=n;
+        int ans=0;   
+    while(x<y)
+    {
+        int mid = x+(y-x)/2;
+        if(n-mid<=cit[mid])
         {
-            if(n-i<=cit[i])
-            {
-                return n-i;
-            }
+            ans = Math.max(n-mid,ans);
+            y=mid;
         }
-        return 0;
+        else
+        {
+            x =mid+1;
+        }
+    }
+        return ans;
     }
 }
